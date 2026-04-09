@@ -2,6 +2,7 @@ import os
 import streamlit as st
 import base64
 from openai import OpenAI
+from PIL import Image
 
 # Function to encode the image to base64
 def encode_image(image_file):
@@ -20,6 +21,10 @@ try:
     st.image(image, width=350)
 except Exception as e:
     st.warning(f"No se pudo cargar la imagen: {e}")
+
+# Sidebar information
+with st.sidebar:
+    st.subheader("Este Agente te ayudará a obtener una descripcion de una imagen")
 
 
 # Retrieve the OpenAI API Key from secrets
