@@ -3,12 +3,6 @@ import streamlit as st
 import base64
 from openai import OpenAI
 from PIL import Image
-from PyPDF2 import PdfReader
-from langchain.text_splitter import CharacterTextSplitter
-from langchain.embeddings import OpenAIEmbeddings
-from langchain.vectorstores import FAISS
-from langchain.llms import OpenAI
-from langchain.chains.question_answering import load_qa_chain
 import platform
 
 # Function to encode the image to base64
